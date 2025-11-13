@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Custom scrollbar styles */
+/* 스크롤바 전체 */
+::-webkit-scrollbar {
+  width: 8px; /* 스크롤바 너비 */
+}
+
+/* 스크롤바 트랙 (배경) */
+::-webkit-scrollbar-track {
+  background: transparent; /* 배경은 투명하게 */
+}
+
+/* 스크롤바 핸들 (움직이는 막대) */
+::-webkit-scrollbar-thumb {
+  background: #ffffff; /* 핸들 색상을 흰색으로 */
+  border-radius: 10px; /* 둥글게 만들기 */
+}
+
+/* 스크롤바 핸들에 마우스를 올렸을 때 */
+::-webkit-scrollbar-thumb:hover {
+  background: #e2e8f0; /* 살짝 어두운 흰색으로 변경 */
+}
